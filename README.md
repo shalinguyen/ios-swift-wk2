@@ -1,7 +1,7 @@
 Rotten Tomatoes with Swift
 =============
 
-How many hours did it take to complete? **7 hours**
+How many hours did it take to complete? **11 hours**
 
 Which required and optional stories have you completed?
 
