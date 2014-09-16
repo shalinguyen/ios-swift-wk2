@@ -40,6 +40,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return movies.count
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as MovieCell

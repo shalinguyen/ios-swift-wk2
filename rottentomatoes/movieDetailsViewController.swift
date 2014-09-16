@@ -28,32 +28,20 @@ class MovieDetailsViewController: UIViewController {
         var lowResPosterURL = posters["thumbnail"] as String
         var hiResPosterUrl = lowResPosterURL.stringByReplacingOccurrencesOfString("tmb", withString: "org", options: NSStringCompareOptions.LiteralSearch, range: nil)
         
-        
         var movieTitle = movie["title"] as String
         var synopsis = movie["synopsis"] as String
         var synopsisSize = detailSynopsisLabel.sizeThatFits
-        
-        
         
         detailTitleLabel.text = movieTitle
         detailSynopsisLabel.text = synopsis
         detailSynopsisLabel.numberOfLines = 0;
         detailSynopsisLabel.sizeToFit()
-        
-        
-        
-        
         detailPosterView.setImageWithURL(NSURL(string: lowResPosterURL))
         detailPosterView.setImageWithURL(NSURL(string: hiResPosterUrl))
         
-        
-        //detailContainerView.frame.height = CGSize(synopsisSize.height + 200)
-        
-        //detailScrollView.contentSize = CGSize(width: 320, height: 1000)
-        
         detailScrollView.contentSize = CGSizeMake(detailContainerView.frame.size.width, detailSynopsisLabel.frame.height + 365)
 
-        
+        self.title = movieTitle
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,10 +49,8 @@ class MovieDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
-
 
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         // Get the new view controller using segue.destinationViewController.
