@@ -19,8 +19,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.yellowColor()]
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -50,8 +51,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         var movie = movies[indexPath.row]
         
-        cell.movieTitleLabel.text = movie["title"] as String
-        cell.synopsisTitle.text = movie["synopsis"] as String
+        cell.movieTitleLabel.text = movie["title"] as? String
+        cell.synopsisTitle.text = movie["synopsis"] as? String
         
         var posterDictionary = movie["posters"] as NSDictionary
         var posterUrl = posterDictionary["thumbnail"] as String
