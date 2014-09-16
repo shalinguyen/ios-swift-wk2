@@ -24,3 +24,5 @@ Which required and optional stories have you completed?
 - [x] Customize the navigation bar. (optional)
 - [x] Add a tab bar for Box Office and DVD. (optional)
 - [ ] Add a search bar. (optional)
+
+!(preview)[https://s3.amazonaws.com/uploads.hipchat.com/72172/510168/lstqvJA7zvXzrmn/rottentomatoes.gif]
