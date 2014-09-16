@@ -66,35 +66,7 @@
             </objects>
             <point key="canvasLocation" x="1925" y="481"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="A8L-kz-fCO">
-            <objects>
-                <viewController id="v9D-Js-J0z" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="b9V-IX-qGF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="csX-k2-QTi">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Ent-iJ-aoo" kind="push" id="cnM-ht-TML"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.39167035639999997" green="0.20372691379999999" blue="0.89245854589999996" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="o2d-qd-bnT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f2v-8Z-h5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1451" y="-253"/>
-        </scene>
-        <!--DVDs-->
+        <!--Movies-->
         <scene sceneID="1vQ-Ra-yGP">
             <objects>
                 <viewController id="Ent-iJ-aoo" customClass="TableViewController" customModule="rottentomatoes" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,7 +129,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="DVDs" id="enh-UW-U4b"/>
+                    <navigationItem key="navigationItem" title="Movies" id="enh-UW-U4b"/>
                     <connections>
                         <outlet property="activityIndicatorView" destination="Rbg-YX-8ia" id="Fcy-O6-1ha"/>
                         <outlet property="networkErrorLabel" destination="ZLV-te-KeQ" id="orC-ks-56L"/>
@@ -166,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLN-e3-D6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="-253"/>
+            <point key="canvasLocation" x="1440" y="-253"/>
         </scene>
         <!--Details-->
         <scene sceneID="Uu2-RJ-7VM">
@@ -237,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMD-he-3ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2483" y="-253"/>
+            <point key="canvasLocation" x="2012" y="-253"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QAC-UQ-aMf">
@@ -258,11 +230,11 @@
             </objects>
             <point key="canvasLocation" x="428" y="128"/>
         </scene>
-        <!--DVDs-->
+        <!--Movies-->
         <scene sceneID="H5s-ZM-A9B">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uwx-k1-nH2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="DVDs" image="dvds" id="0Uy-LQ-OHL"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="movies" id="0Uy-LQ-OHL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xw2-1O-ysx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -270,18 +242,18 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="v9D-Js-J0z" kind="relationship" relationship="rootViewController" id="Z9e-ST-4zo"/>
+                        <segue destination="Ent-iJ-aoo" kind="relationship" relationship="rootViewController" id="5KR-FJ-Ef4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Yk-f6-spA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="961" y="-253"/>
         </scene>
-        <!--Movies-->
+        <!--DVDs-->
         <scene sceneID="3Y9-1N-g3l">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nbb-Ru-1Yf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Movies" image="movies" id="Xjr-21-vT8"/>
+                    <tabBarItem key="tabBarItem" title="DVDs" image="dvds" id="Xjr-21-vT8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hjg-gW-4UF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

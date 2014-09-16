@@ -63,6 +63,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var url = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=6sjv63ep77dg75rctjv8qvsc&limit=20&country=us"
         var request = NSURLRequest(URL: NSURL(string: url))
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            println(response)
             if (error == nil) {
                 var objects = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
                 self.movies = objects["movies"] as [NSDictionary]

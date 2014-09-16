@@ -33,10 +33,15 @@ class MovieDetailsViewController: UIViewController {
         var synopsis = movie["synopsis"] as String
         var synopsisSize = detailSynopsisLabel.sizeThatFits
         
+        
+        
         detailTitleLabel.text = movieTitle
         detailSynopsisLabel.text = synopsis
         detailSynopsisLabel.numberOfLines = 0;
         detailSynopsisLabel.sizeToFit()
+        
+        
+        
         
         detailPosterView.setImageWithURL(NSURL(string: lowResPosterURL))
         detailPosterView.setImageWithURL(NSURL(string: hiResPosterUrl))
@@ -46,7 +51,7 @@ class MovieDetailsViewController: UIViewController {
         
         //detailScrollView.contentSize = CGSize(width: 320, height: 1000)
         
-        detailScrollView.contentSize = CGSizeMake(detailContainerView.frame.size.width, detailContainerView.frame.size.height)
+        detailScrollView.contentSize = CGSizeMake(detailContainerView.frame.size.width, detailSynopsisLabel.frame.height + 365)
 
         
     }
